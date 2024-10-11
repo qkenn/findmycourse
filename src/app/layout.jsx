@@ -1,5 +1,5 @@
 import { inter, roboto_mono } from '@/lib/fonts';
-import './globals.css';
+import '@/ui/globals.css';
 
 import Header from '@/ui/Header';
 import Footer from '@/ui/Footer';

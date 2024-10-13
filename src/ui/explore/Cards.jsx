@@ -71,3 +71,23 @@ export function CourseCard({ id, name, programmes }) {
     </li>
   );
 }
+
+export function UniversityCard({ id, name, programmes }) {
+  return (
+    <li className="self-start rounded-sm bg-white p-10">
+      <Link href={`/explore/universities/${id}`}>
+        <div>
+          <h2 className="text-xl font-semibold">{name}</h2>
+
+          {programmes.length > 0 && (
+            <div className="mt-3 inline-block text-neutral-700 hover:underline">
+              {programmes.length === 1
+                ? '1 Programme'
+                : `${programmes.length} Programmes`}
+            </div>
+          )}
+        </div>
+      </Link>
+    </li>
+  );
+}

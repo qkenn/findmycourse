@@ -15,3 +15,11 @@ export const getCourses = () => {
     },
   });
 };
+
+export const getUnis = () => {
+  return prisma.university.findMany({
+    include: {
+      programmes: true,
+    },
+  });
+};

@@ -7,3 +7,11 @@ export const getSubjects = () => {
     },
   });
 };
+
+export const getCourses = () => {
+  return prisma.course.findMany({
+    include: {
+      programmes: true,
+    },
+  });
+};

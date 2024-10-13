@@ -23,3 +23,11 @@ export const getUnis = () => {
     },
   });
 };
+
+export const getProgrammes = () => {
+  return prisma.programme.findMany({
+    include: {
+      university: true,
+    },
+  });
+};

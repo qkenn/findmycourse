@@ -91,3 +91,22 @@ export function UniversityCard({ id, name, programmes }) {
     </li>
   );
 }
+
+export function ProgrammeCard({ id, name, university }) {
+  return (
+    <li className="self-start rounded-sm bg-white p-10 flex flex-col gap-3">
+      <Link
+        className="text-xl font-semibold hover:underline"
+        href={`/explore/programmes/${id}`}
+      >
+        {name}
+      </Link>
+      <Link
+        href={`/explore/universities/${university.id}`}
+        className="inline-block text-neutral-700 hover:underline"
+      >
+        {university.name}
+      </Link>
+    </li>
+  );
+}

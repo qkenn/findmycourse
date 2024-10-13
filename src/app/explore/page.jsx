@@ -3,7 +3,7 @@ import { ExploreCard } from '@/ui/explore/Cards';
 
 export default function Page() {
   return (
-    <main className="bg-neutral-100">
+    <main>
       <CenteredContainer>
         <TwoColGrid>
           <ExploreCard type="Subject" />

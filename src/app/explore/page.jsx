@@ -1,5 +1,5 @@
 import { ExploreCard } from '@/ui/explore/Cards';
-import { TwoColGrid } from '@/ui/Wrappers';
+import { TwoColGrid } from '@/ui/wrappers';
 
 export default function Page() {
   return (

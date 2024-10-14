@@ -1,6 +1,6 @@
 import { getSubjects } from '@/lib/queries';
 import { SubjectCard } from '@/ui/explore/Cards';
-import { TwoColGrid } from '@/ui/Wrappers';
+import { TwoColGrid } from '@/ui/wrappers';
 
 export default async function Page() {
   const subjects = await getSubjects();

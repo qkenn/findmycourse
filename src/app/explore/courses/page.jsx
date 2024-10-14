@@ -1,6 +1,6 @@
 import { getCourses } from '@/lib/queries';
 import { CourseCard } from '@/ui/explore/Cards';
-import { TwoColGrid } from '@/ui/Wrappers';
+import { TwoColGrid } from '@/ui/wrappers';
 
 export default async function Page() {
   const courses = await getCourses();

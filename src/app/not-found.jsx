@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { CenteredContainer } from '@/ui/Wrappers';
+import { CenteredContainer } from '@/ui/wrappers';
 
 export default function NotFound() {
   return (

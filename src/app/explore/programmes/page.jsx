@@ -1,6 +1,6 @@
 import { getProgrammes } from '@/lib/queries';
 import { ProgrammeCard } from '@/ui/explore/Cards';
-import { TwoColGrid } from '@/ui/Wrappers';
+import { TwoColGrid } from '@/ui/wrappers';
 
 export default async function Page() {
   const programmes = await getProgrammes();

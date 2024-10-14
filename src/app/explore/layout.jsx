@@ -1,4 +1,4 @@
-import { CenteredContainer, TwoColGrid } from '@/ui/Wrappers';
+import { CenteredContainer, TwoColGrid } from '@/ui/wrappers';
 
 export default function ExploreLayout({ children }) {
   return (

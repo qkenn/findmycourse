@@ -1,11 +1,10 @@
-import { PrismaClient } from '@prisma/client';
+const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
-import subjects from '../src/lib/placeholder-data/subjects.json' assert { type: 'json' };
-import universities from '../src/lib/placeholder-data/universities.json' assert { type: 'json' };
-import courses from '../src/lib/placeholder-data/courses.json' assert { type: 'json' };
-import programmes from '../src/lib/placeholder-data/programmes.json' assert { type: 'json' };
-
+const subjects = require('../src/lib/placeholder-data/subjects.json');
+const universities = require('../src/lib/placeholder-data/universities.json');
+const courses = require('../src/lib/placeholder-data/courses.json');
+const programmes = require('../src/lib/placeholder-data/programmes.json');
 async function main() {
   // some models depends on other models
   // hence, Promise.all() models seperately

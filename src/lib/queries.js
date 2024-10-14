@@ -31,3 +31,48 @@ export const getProgrammes = () => {
     },
   });
 };
+
+export const getSingleCourse = (id) => {
+  return prisma.course.findUnique({
+    where: {
+      id: +id,
+    },
+    include: {
+      programmes: true,
+    },
+  });
+};
+
+export const getSingleProgramme = (id) => {
+  return prisma.programme.findUnique({
+    where: {
+      id: +id,
+    },
+    include: {
+      university: true,
+      course: true,
+    },
+  });
+};
+
+export const getSingleSubject = (id) => {
+  return prisma.subject.findUnique({
+    where: {
+      id: +id,
+    },
+    include: {
+      courses: true,
+    },
+  });
+};
+
+export const getSingleUni = (id) => {
+  return prisma.university.findUnique({
+    where: {
+      id: +id,
+    },
+    include: {
+      programmes: true,
+    },
+  });
+};

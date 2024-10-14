@@ -1,17 +1,13 @@
-import { CenteredContainer, TwoColGrid } from '@/ui/Wrappers';
 import { ExploreCard } from '@/ui/explore/Cards';
+import { TwoColGrid } from '@/ui/Wrappers';
 
 export default function Page() {
   return (
-    <main>
-      <CenteredContainer>
-        <TwoColGrid>
-          <ExploreCard type="Subject" />
-          <ExploreCard type="Course" />
-          <ExploreCard type="Programme" />
-          <ExploreCard type="University" />
-        </TwoColGrid>
-      </CenteredContainer>
-    </main>
+    <TwoColGrid>
+      <ExploreCard type="Subject" />
+      <ExploreCard type="Course" />
+      <ExploreCard type="Programme" />
+      <ExploreCard type="University" />
+    </TwoColGrid>
   );
 }

@@ -1,19 +1,15 @@
-import { CenteredContainer, TwoColGrid } from '@/ui/Wrappers';
-import { CourseCard } from '@/ui/explore/Cards';
 import { getCourses } from '@/lib/queries';
+import { CourseCard } from '@/ui/explore/Cards';
+import { TwoColGrid } from '@/ui/Wrappers';
 
 export default async function Page() {
   const courses = await getCourses();
 
   return (
-    <main>
-      <CenteredContainer>
-        <TwoColGrid>
-          {courses.map((course) => {
-            return <CourseCard key={course.id} {...course} />;
-          })}
-        </TwoColGrid>
-      </CenteredContainer>
-    </main>
+    <TwoColGrid>
+      {courses.map((course) => {
+        return <CourseCard key={course.id} {...course} />;
+      })}
+    </TwoColGrid>
   );
 }

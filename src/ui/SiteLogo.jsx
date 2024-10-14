@@ -14,7 +14,7 @@ export default function SiteLogo() {
           />
         </div>
 
-        <h4 className="pt-1 text-white font-mono">unicourse</h4>
+        <h4 className="pt-1 text-white">unicourse</h4>
       </div>
     </Link>
   );

@@ -10,7 +10,9 @@ export default function SearchForm() {
   const pathname = usePathname();
   const { replace } = useRouter();
 
-  function handleSearch() {
+  function handleSearch(e) {
+    e.preventDefault();
+
     const inputValue = inputRef.current.value;
     const params = new URLSearchParams(searchParams);
 
@@ -24,9 +26,10 @@ export default function SearchForm() {
   }
 
   return (
-    <div
+    <form
       className="mt-10 flex flex-col items-center justify-center gap-5 md:flex-row"
       autoComplete="off"
+      onSubmit={handleSearch}
     >
       <label className="block">
         <span className="text-sm">Courses and programmes</span>
@@ -50,12 +53,9 @@ export default function SearchForm() {
         </div>
       </label>
 
-      <button
-        className="block rounded-sm bg-neutral-950 px-10 py-2 text-white transition-colors focus:bg-neutral-700 focus:outline-none md:self-end md:px-8"
-        onClick={handleSearch}
-      >
+      <button className="block rounded-sm bg-neutral-950 px-10 py-2 text-white transition-colors focus:bg-neutral-700 focus:outline-none md:self-end md:px-8">
         Find
       </button>
-    </div>
+    </form>
   );
 }

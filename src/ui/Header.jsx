@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <>
       <header
-        className={clsx('z-30 bg-neutral-950 py-3', {
+        className={clsx('z-30 bg-neutral-950 py-4', {
           'fixed left-0 right-0 top-0': hamSelected,
           relative: !hamSelected,
         })}

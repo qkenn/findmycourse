@@ -5,16 +5,8 @@ export default function SiteLogo() {
   return (
     <Link href="/">
       <div className="flex items-center justify-center gap-2">
-        <div className="h-[30px] w-[30px]">
-          <Image
-            src="/site-logo.svg"
-            alt="website logo"
-            width={30}
-            height={30}
-          />
-        </div>
-
-        <h4 className="pt-1 text-white">unicourse</h4>
+        <Image src="/logo.svg" alt="website logo" width={40} height={40} />
+        <h3 className="text-white font-bold">FindMyCourse</h3>
       </div>
     </Link>
   );

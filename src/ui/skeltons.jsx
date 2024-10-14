@@ -1,12 +1,18 @@
 export function SearchResultsSkelton() {
-  return Array(8)
-    .fill(null)
-    .map((_, index) => (
-      <div
-        key={index}
-        className="h-[200px] animate-pulse rounded-sm bg-white"
-      ></div>
-    ));
+  return (
+    <section className="md:col-span-8">
+      <ul className="flex flex-col gap-10">
+        {Array(8)
+          .fill(null)
+          .map((_, index) => (
+            <div
+              key={index}
+              className="h-[200px] animate-pulse rounded-sm bg-white"
+            ></div>
+          ))}
+      </ul>
+    </section>
+  );
 }
 
 export function ExploreSkelton() {

@@ -11,7 +11,9 @@ export default async function ResultsContainer({ query, page }) {
 
   return (
     <section>
-      <PaginationDetails count={count} resultsLength={programmes.length} />
+      {programmes.length > 0 && (
+        <PaginationDetails count={count} resultsLength={programmes.length} />
+      )}
 
       <ul className="flex flex-col gap-10 mt-5">
         {programmes.map((result) => (

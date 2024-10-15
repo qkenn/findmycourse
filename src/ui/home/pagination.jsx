@@ -13,7 +13,7 @@ export function Pagination({ query, count }) {
   const currentPage = params.get('page');
 
   return (
-    <div className="flex justify-center gap-3 mt-10">
+    <div className="flex justify-center gap-6 mt-10">
       {[...Array(pagesCount)].map((_, index) => {
         const pageNumber = index + 1;
 

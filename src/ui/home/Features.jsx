@@ -1,6 +1,6 @@
 export default function Features() {
   return (
-    <section className="mx-auto my-16 flex max-w-main flex-col gap-10 px-5 md:my-32 md:flex-row md:justify-between xl:px-0">
+    <section className="mx-auto my-10 flex max-w-main flex-col gap-10 px-5 md:my-32 md:flex-row md:justify-between xl:px-0">
       <Feature type="search" />
       <Feature type="explore" />
       <Feature type="discover" />

@@ -6,11 +6,11 @@ export default function Home({ searchParams }) {
   const query = searchParams.query || '';
   const currentPage = searchParams.page || 1;
 
-  console.log(query);
-
   return (
     <>
-      <SearchWrapper results={<SearchResults query={query} />} />
+      <SearchWrapper
+        results={<SearchResults query={query} page={currentPage} />}
+      />
       <Features />
     </>
   );

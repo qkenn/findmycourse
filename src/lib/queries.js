@@ -1,4 +1,5 @@
 import prisma from '@/lib/prisma';
+import { skip } from '@prisma/client/runtime/library';
 
 export const getSubjects = () => {
   return prisma.subject.findMany({
@@ -77,8 +78,11 @@ export const getSingleUni = (id) => {
   });
 };
 
-export const getSearchedProgrammes = (query) => {
+const pageSize = 8;
+export const getSearchedProgrammes = (query, page) => {
   return prisma.programme.findMany({
+    skip: (page - 1) * pageSize,
+    take: pageSize,
     where: {
       OR: [
         {
@@ -115,6 +119,44 @@ export const getSearchedProgrammes = (query) => {
     include: {
       university: true,
       course: true,
+    },
+  });
+};
+
+export const getSearchResultsCount = async (query) => {
+  return prisma.programme.count({
+    where: {
+      OR: [
+        {
+          name: {
+            contains: query,
+            mode: 'insensitive',
+          },
+        },
+        {
+          university: {
+            name: {
+              contains: query,
+              mode: 'insensitive',
+            },
+          },
+        },
+        {
+          course: {
+            name: {
+              contains: query,
+              mode: 'insensitive',
+            },
+          },
+        },
+        ...query.split(' ').map((word) => {
+          return {
+            keywords: {
+              has: word,
+            },
+          };
+        }),
+      ],
     },
   });
 };

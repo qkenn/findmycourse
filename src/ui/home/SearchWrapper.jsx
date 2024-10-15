@@ -17,7 +17,7 @@ export default function SearchWrapper({ results }) {
         }}
       />
       <main>
-        <CenteredContainer home={true}>
+        <CenteredContainer>
           <div className="mt-3 flex flex-col gap-10">
             {initiated && results}
           </div>

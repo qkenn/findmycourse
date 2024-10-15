@@ -15,7 +15,7 @@ export default function Footer() {
         </div>
 
         <Link
-          href="https://github.com/qkenn/unicourse-nextjs"
+          href="https://github.com/qkenn/findmycourse"
           target="_blank"
           className="text-sm"
         >

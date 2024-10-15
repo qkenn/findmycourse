@@ -76,3 +76,45 @@ export const getSingleUni = (id) => {
     },
   });
 };
+
+export const getSearchedProgrammes = (query) => {
+  return prisma.programme.findMany({
+    where: {
+      OR: [
+        {
+          name: {
+            contains: query,
+            mode: 'insensitive',
+          },
+        },
+        {
+          university: {
+            name: {
+              contains: query,
+              mode: 'insensitive',
+            },
+          },
+        },
+        {
+          course: {
+            name: {
+              contains: query,
+              mode: 'insensitive',
+            },
+          },
+        },
+        ...query.split(' ').map((word) => {
+          return {
+            keywords: {
+              has: word,
+            },
+          };
+        }),
+      ],
+    },
+    include: {
+      university: true,
+      course: true,
+    },
+  });
+};

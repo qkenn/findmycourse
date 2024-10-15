@@ -38,7 +38,7 @@ export default function SearchForm({ handleInitalize }) {
           <input
             autoFocus
             type="text"
-            placeholder="Keywords e.g subject/programme name/location"
+            placeholder='try searching for "tech"'
             className="mt-1 block w-full rounded-sm border-[1px] border-neutral-600/50 px-5 py-2 pl-12 placeholder:text-neutral-400 sm:w-[32rem]"
             defaultValue={searchParams.get('query')?.toString()}
             ref={inputRef}

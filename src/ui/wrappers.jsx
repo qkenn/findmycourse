@@ -1,13 +1,8 @@
 import clsx from 'clsx';
 
-export function CenteredContainer({ children, home = false }) {
+export function CenteredContainer({ children }) {
   return (
-    <section
-      className={clsx('mx-auto max-w-main px-5 xl:px-0', {
-        'my-10': home,
-        'my-20': !home,
-      })}
-    >
+    <section className={clsx('mx-auto max-w-main px-5 xl:px-0 mt-20')}>
       {children}
     </section>
   );

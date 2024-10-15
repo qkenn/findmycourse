@@ -1,8 +1,7 @@
 import ResultCard from './ResultCard';
 import { getSearchedProgrammes, getSearchResultsCount } from '@/lib/queries';
 import { SearchNotFound } from '../errors';
-import Link from 'next/link';
-import Pagination from './pagination';
+import { Pagination, PaginationDetails } from './pagination';
 
 export default async function ResultsContainer({ query, page }) {
   const [programmes, count] = await Promise.all([
@@ -12,7 +11,9 @@ export default async function ResultsContainer({ query, page }) {
 
   return (
     <section>
-      <ul className="flex flex-col gap-10">
+      <PaginationDetails count={count} resultsLength={programmes.length} />
+
+      <ul className="flex flex-col gap-10 mt-5">
         {programmes.map((result) => (
           <ResultCard key={result.id} {...result} />
         ))}

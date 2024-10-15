@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname, useSearchParams } from 'next/navigation';
 import clsx from 'clsx';
 
-export default function Pagination({ query, count }) {
+export function Pagination({ query, count }) {
   const pathname = usePathname();
   const pagesCount = (count || 0) <= 8 ? 1 : Math.ceil((count || 0) / 8);
 
@@ -31,6 +31,20 @@ export default function Pagination({ query, count }) {
           </Link>
         );
       })}
+    </div>
+  );
+}
+
+export function PaginationDetails({ count, resultsLength }) {
+  const searchParams = useSearchParams();
+  const params = new URLSearchParams(searchParams);
+  const currentPage = params.get('page');
+
+  return (
+    <div>
+      {`Showing ${(+currentPage - 1) * 8 + 1} - ${
+        (+currentPage - 1) * 8 + resultsLength
+      } of ${count} results.`}
     </div>
   );
 }

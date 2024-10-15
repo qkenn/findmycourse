@@ -1,0 +1,304 @@
+[
+  {
+    "id": 1,
+    "courseCode": "104",
+    "intake": 920,
+    "name": "Information Communication Technology",
+    "constraints": {
+      "minimum": [
+        "At least 'S' grades for Information & Communication Technology (ICT), Science for Technology (SFT) and Engineering Technology (ET) or Biosystems Technology (BST)."
+      ]
+    },
+    "subjectId": 4
+  },
+  {
+    "id": 2,
+    "courseCode": "030",
+    "intake": 88,
+    "name": "Town & Country Planning",
+    "constraints": {
+      "minimum": [
+        {
+          "rule": "At least Ordinary Passes (S) in three subjects from the following subjects at the G.C.E. (Advanced Level) Examination",
+          "subjects": [
+            "Combined Mathematics",
+            "Chemistry",
+            "Physics",
+            "Biology"
+          ]
+        },
+        {
+          "rule": "One or two subject/s from the above and the subject/subjects from the following subjects.",
+          "subjects": ["Accounting", "Agricultural Science"]
+        },
+        {
+          "rule": "In addition to that, candidates should have satisfied the following requirements at the G.C.E. (Ordinary Level) Examination",
+          "subjects": [
+            "(a) At least a Very Good Pass (B) in English",
+            "(b) At least a Credit Pass (C) in Mathematics"
+          ]
+        }
+      ]
+    },
+    "subjectId": 5
+  },
+  {
+    "id": 3,
+    "courseCode": "023",
+    "intake": 100,
+    "name": "Architecure",
+    "subjectId": 5
+  },
+  {
+    "id": 4,
+    "courseCode": "034",
+    "intake": 79,
+    "name": "Fashion Design & Product Development",
+    "subjectId": 19
+  },
+  {
+    "id": 5,
+    "courseCode": "025",
+    "intake": 495,
+    "name": "Law",
+    "subjectId": 11
+  },
+  {
+    "id": 6,
+    "courseCode": "056",
+    "intake": 81,
+    "name": "Facilities Management",
+    "subjectId": 5
+  },
+  {
+    "id": 7,
+    "courseCode": "064",
+    "intake": 107,
+    "name": "Science and Technology",
+    "subjectId": 18
+  },
+  {
+    "id": 8,
+    "courseCode": "065",
+    "intake": 101,
+    "name": "Computer Science and Technology",
+    "subjectId": 4
+  },
+  {
+    "id": 9,
+    "courseCode": "066",
+    "intake": 101,
+    "name": "Entrepreneurship and Management",
+    "subjectId": 3
+  },
+  {
+    "id": 10,
+    "courseCode": "081",
+    "intake": 147,
+    "name": "Physical Education",
+    "subjectId": 14
+  },
+  {
+    "id": 11,
+    "courseCode": "019",
+    "intake": 7083,
+    "name": "Arts",
+    "subjectId": 2
+  },
+  {
+    "id": 12,
+    "courseCode": "020",
+    "intake": 110,
+    "name": "Arts(SP) - Mass Media",
+    "subjectId": 2
+  },
+  {
+    "id": 13,
+    "courseCode": "041",
+    "intake": 110,
+    "name": "Arts(SP) - Performing Arts",
+    "subjectId": 2
+  },
+  {
+    "id": 14,
+    "courseCode": "021",
+    "intake": 350,
+    "name": "Arts(SAB)",
+    "subjectId": 2
+  },
+  {
+    "id": 15,
+    "courseCode": "029",
+    "intake": 200,
+    "name": "Communication Studies",
+    "subjectId": 10
+  },
+  {
+    "id": 16,
+    "courseCode": "031",
+    "intake": 36,
+    "name": "Peace and Conflict Resolution",
+    "subjectId": 16
+  },
+  {
+    "id": 17,
+    "courseCode": "063",
+    "intake": 278,
+    "name": "Islamic Studies",
+    "subjectId": 15
+  },
+  {
+    "id": 18,
+    "courseCode": "084",
+    "intake": 225,
+    "name": "Arabic Languages",
+    "subjectId": 10
+  },
+  {
+    "id": 19,
+    "courseCode": "105",
+    "intake": 101,
+    "name": "Teaching English as a Second Language",
+    "subjectId": 10
+  },
+  {
+    "id": 20,
+    "courseCode": "068",
+    "intake": 50,
+    "name": "Music",
+    "subjectId": 2
+  },
+  {
+    "id": 21,
+    "courseCode": "112",
+    "intake": 101,
+    "name": "Social Work",
+    "subjectId": 17
+  },
+  {
+    "id": 22,
+    "courseCode": "128",
+    "intake": 50,
+    "name": "Arts - Information Technology",
+    "subjectId": 4
+  },
+  {
+    "id": 23,
+    "courseCode": "016",
+    "intake": 5440,
+    "name": "Management",
+    "subjectId": 3
+  },
+  {
+    "id": 24,
+    "courseCode": "028",
+    "intake": 100,
+    "name": "Management (Public) Honours",
+    "subjectId": 3
+  },
+  {
+    "id": 25,
+    "courseCode": "017",
+    "intake": 70,
+    "name": "Real Estate Management and Valuation",
+    "subjectId": 3
+  },
+  {
+    "id": 26,
+    "courseCode": "018",
+    "intake": 887,
+    "name": "Commerce",
+    "subjectId": 3
+  },
+  {
+    "id": 27,
+    "courseCode": "022",
+    "intake": 458,
+    "name": "Management Studies(TV)",
+    "subjectId": 3
+  },
+  {
+    "id": 28,
+    "courseCode": "077",
+    "intake": 80,
+    "name": "Business Information Systems",
+    "subjectId": 3
+  },
+  {
+    "id": 29,
+    "courseCode": "127",
+    "intake": 50,
+    "name": "Accounting Information Systems",
+    "subjectId": 3
+  },
+  {
+    "id": 30,
+    "courseCode": "133",
+    "intake": 50,
+    "name": "Banking and Insurance",
+    "subjectId": 3
+  },
+  {
+    "id": 31,
+    "courseCode": "001",
+    "intake": 2088,
+    "name": "Medicine",
+    "subjectId": 7
+  },
+  {
+    "id": 32,
+    "courseCode": "002",
+    "intake": 130,
+    "name": "Dental Surgery",
+    "subjectId": 7
+  },
+  {
+    "id": 33,
+    "courseCode": "003",
+    "intake": 130,
+    "name": "Veterinary Science",
+    "subjectId": 7
+  },
+  {
+    "id": 34,
+    "courseCode": "039",
+    "intake": 221,
+    "name": "Agricultural Technology & Management",
+    "subjectId": 1
+  },
+  {
+    "id": 35,
+    "courseCode": "004",
+    "intake": 889,
+    "name": "Agricultural Technology & Management",
+    "subjectId": 1
+  },
+  {
+    "id": 36,
+    "courseCode": "005",
+    "intake": 165,
+    "name": "Food Science & Nutrition",
+    "subjectId": 1
+  },
+  {
+    "id": 37,
+    "courseCode": "035",
+    "intake": 218,
+    "name": "Food Science & Technology",
+    "subjectId": 1
+  },
+  {
+    "id": 38,
+    "courseCode": "032",
+    "intake": 383,
+    "name": "Ayurvedic Medicine and Surgery",
+    "subjectId": 7
+  },
+  {
+    "id": 39,
+    "courseCode": "033",
+    "intake": 89,
+    "name": "Unani Medicine and Surgery",
+    "subjectId": 7
+  }
+]

@@ -1,9 +1,14 @@
 import ResultCard from './ResultCard';
-import { getSearchedProgrammes } from '@/lib/queries';
+import { getSearchedProgrammes, getSearchResultsCount } from '@/lib/queries';
 import { SearchNotFound } from '../errors';
+import Link from 'next/link';
+import Pagination from './pagination';
 
-export default async function ResultsContainer({ query }) {
-  const programmes = await getSearchedProgrammes(query);
+export default async function ResultsContainer({ query, page }) {
+  const [programmes, count] = await Promise.all([
+    getSearchedProgrammes(query, page),
+    getSearchResultsCount(query),
+  ]);
 
   return (
     <section>
@@ -14,6 +19,8 @@ export default async function ResultsContainer({ query }) {
 
         {programmes.length < 1 && <SearchNotFound />}
       </ul>
+
+      {programmes.length > 0 && <Pagination query={query} count={count} />}
     </section>
   );
 }

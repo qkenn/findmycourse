@@ -21,6 +21,8 @@ export default function SearchForm({ handleInitalize }) {
       params.delete('query');
     }
 
+    params.set('page', 1);
+
     replace(`${pathname}?${params.toString()}`);
   }
 

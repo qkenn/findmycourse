@@ -1,6 +1,6 @@
 import SearchForm from './SearchForm';
 
-export function Hero() {
+export function Hero({ handleInitalize }) {
   return (
     <section className="bg-white">
       <div className="mx-auto flex min-h-[55dvh] max-w-main flex-col justify-center px-5 md:px-0">
@@ -8,7 +8,7 @@ export function Hero() {
           Search for degree programmes
         </h1>
 
-        <SearchForm />
+        <SearchForm handleInitalize={handleInitalize} />
       </div>
     </section>
   );

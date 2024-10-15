@@ -1,15 +1,16 @@
 import Features from '@/ui/home/Features';
-import { Hero } from '@/ui/home/Hero';
+import SearchWrapper from '@/ui/home/SearchWrapper';
 import SearchResults from '@/ui/home/SearchResults';
 
-export default async function Home({ searchParams }) {
+export default function Home({ searchParams }) {
   const query = searchParams.query || '';
   const currentPage = searchParams.page || 1;
 
+  console.log(query);
+
   return (
     <>
-      <Hero />
-      <SearchResults query={query} />
+      <SearchWrapper results={<SearchResults query={query} />} />
       <Features />
     </>
   );

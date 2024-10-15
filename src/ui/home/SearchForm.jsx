@@ -1,10 +1,8 @@
-'use client';
-
 import Image from 'next/image';
 import { useRef } from 'react';
 import { useSearchParams, usePathname, useRouter } from 'next/navigation';
 
-export default function SearchForm() {
+export default function SearchForm({ handleInitalize }) {
   const inputRef = useRef(null);
   const searchParams = useSearchParams();
   const pathname = usePathname();
@@ -12,6 +10,7 @@ export default function SearchForm() {
 
   function handleSearch(e) {
     e.preventDefault();
+    handleInitalize();
 
     const inputValue = inputRef.current.value;
     const params = new URLSearchParams(searchParams);
